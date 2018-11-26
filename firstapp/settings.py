@@ -17,19 +17,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ic(xlly-d!qu4unkj@p3aw_%3xd@$#r1!05n@3+t5us=kg4db+'
+SECRET_KEY = ''
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 ALLOWED_HOSTS = []
 
 TEMPLATE_DIRS = (
-    '/Users/macpro/djangoenv/bin/firstapp/templates',
-    '/Users/macpro/djangoenv/bin/firstapp/article/templates',
-    '/Users/macpro/djangoenv/bin/firstapp/loginsys/templates',
+    BASE_DIR + '/templates',
+    BASE_DIR + '/article/templates',
+    BASE_DIR + '/loginsys/templates',
 )
 
 
@@ -90,5 +88,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    ('static', '/Users/macpro/djangoenv/bin/firstapp/static'),
+    ('static', BASE_DIR + '/static'),
 )
